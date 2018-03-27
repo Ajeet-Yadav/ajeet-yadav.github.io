@@ -111,57 +111,210 @@ I received Letter of Appreciation for building an App on the theme 'Digital Paym
  <img src="/assets/home/Nyancat.gif" width="20%" align="middle">
 </section>
 
-<!---Particle-->
-<div class="row" style="padding:0px;margin:0px;height:100%;overflow:hidden;position:relative;top:-70px;background:-webkit-linear-gradient(360deg,rgb(41,171,226) 0%,rgb(46,49,146) 100%)">
+<!-- PARTICLE-->
+/* ---- reset ---- */
 
-        <div class="row" id="particles-js">
-            <div class="col l8 offset-l2 s12 center " style="padding-top:120px;">
-                <h3 class="grey-text text-lighten-3 hide-on-small-only" style="font-weight:bolder;text-transform:uppercase;word-spacing:0px;letter-spacing:5px;padding-left:5px;line-height: 70px">Bringing Cryptocurrency to Millions of Indian pockets</h3>
-                <h5 class="grey-text text-lighten-3 show-on-small hide-on-med-and-up" style="font-weight:bolder;text-transform:uppercase;word-spacing:20px;letter-spacing:5px;padding-left:5px;line-height: 40px">Bringing Crypto currency to Millions of Indian pockets</h5>
-                <br>
-                <div class="col s12 center"><h5 class="flow-text grey-text text-lighten-4" style="line-height: 50px">India's most Easy, Secure and Trusted <br>Digital Currency Exchange</h5></div>
+body {
+  margin: 0;
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
 
-                <div class="col l12 s12 center" style="position:relative;z-index:100;margin-top:20px;">
-                        <div class="center">
-                            <div class="col l6 offset-l3 s12" style="padding:0px 0px 5px 10px;border-radius:10px;border:5px solid rgba(255,255,255,0.0);background-color:rgba(0,0,0,0);">
-                            <input placeholder="ENTER YOUR EMAIL ADDRESS" type="text" class="ui white col l7 m8 s11 validate" id="subscribe-header-name" style="margin-top:15px;padding:5px;border:none;border-radius:3px;">
-                            <button class="ui button blue darken-3 col l4 m3 s11 huge show-on-medium-and-up hide-on-small-only" style="margin-top:15px;padding:20px;margin-left:10px;border:none;border-radius:3px;font-size:15px;" id="subscribe-header-1">SUBMIT</button>
-                            <button class="ui button blue darken-3 col s11 show-on-small hide-on-med-and-up" style="padding:17px;margin-left:10px;border:none;border-radius:3px;" id="subscribe-header-2">SUBMIT</button>
-                            </div>
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
 
-                        </div>
+/* ---- particles.js container ---- */
 
-                        <!--<div class="center">-->
-                            <!--<div class="col l6 offset-l3 s12" style="padding:0px 0px 5px 10px;border-radius:10px;border:5px solid rgba(255,255,255,0.0);background-color:rgba(0,0,0,0.0);">-->
-                                <!--<input placeholder="Enter your email" type="text" class="center-align ui white col l7 s11 validate" id="subscribe-header-name" style="margin-top:15px;padding:5px;border:none;border-radius:3px;">-->
-                                <!--<button class="ui button blue darken-3 col l4 m3 s11 hide-on-small-only" style="margin-top:18px;padding:17px;margin-left:10px;border:none;border-radius:3px;font-family:buc;" id="subscribe-header-1">Get Started</button>-->
-                                <!--<button class="ui button blue darken-3 col s11 show-on-small hide-on-med-and-up" style="padding:17px;margin-left:10px;border:none;border-radius:3px;" id="subscribe-header-2">Get Started</button>-->
-                            <!--</div>-->
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #b61924;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+<!-- particles.js container -->
+<div id="particles-js"></div>
+
+<!-- stats - count particles -->
+<div class="count-particles">
+  <span class="js-count-particles">--</span> particles
+</div>
+
+<!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
+/* ---- particles.js config ---- */
+
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 380,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
 
 
-                                <!--&lt;!&ndash; <input id="new-name-input" type="text" class="validate black-text white col l4" style="padding:5px;border:none;border-radius:3px;"-->
-                                <!--placeholder="Email">-->
-                            <!--<Button class="button ui blue col l3" id="change-name-btn">SUBSCRIBE</Button> &ndash;&gt;-->
-                        <!--</div>-->
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <div class="col s12 l12 center" style="position:relative;z-index:100;margin-top:20px;">
-                    <div class="col s6 offset-s3">
-                        <a href="https://blog.buyucoin.com/index.php/2018/03/06/history-present-future-cryptocurrency-india/" class="white-text" style="position:relative;z-index:10">New to Cryptocurrency ?</a><br class="hide-on-med-and-up">
-                    </div>
+/* ---- stats.js config ---- */
 
-                </div>
-
-
-
-                <div class="row hide-on-small-only" style="height:200px;"></div>
-            </div>
-        <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1349" height="699"></canvas></div>
-    </div>
-<!-- PArticle -->
+var count_particles, stats, update;
+stats = new Stats;
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+  stats.begin();
+  stats.end();
+  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+  }
+  requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
+<!--PARTICLE-->
 </body>
   
 <!-- Adsense Test-->
